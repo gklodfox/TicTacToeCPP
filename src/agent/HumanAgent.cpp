@@ -8,8 +8,6 @@ HumanAgent::HumanAgent(char playerTile) : playerTile(playerTile) {
   fmt::println("Creating {} agent!", playerTile);
 }
 Coordinates HumanAgent::getAction(Board currentBoard) {
-  fmt::println("Getting action for {}", 'X');
-  currentBoard.print();
   bool move_is_valid = false;
   std::string playerInput;
   Coordinates inputCoords;

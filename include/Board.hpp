@@ -15,6 +15,7 @@ public:
   void print();
   TileState getTile(size_t x, size_t y);
   void setTile(size_t x, size_t y, TileState value);
+  bool isWon();
 };
 
 #endif // INCLUDE_BOARD_HPP_

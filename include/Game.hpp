@@ -6,11 +6,13 @@
 
 class Game {
   GameState state;
+  size_t turn = 0;
   HumanAgent agent_x;
-  HumanAgent agent_y;
+  HumanAgent agent_o;
+  Board board;
 
 public:
-  Game(HumanAgent agent_x, HumanAgent agent_y);
+  Game(HumanAgent agent_x, HumanAgent agent_o);
   void start_game();
 };
 
