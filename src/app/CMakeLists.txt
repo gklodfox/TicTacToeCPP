@@ -9,4 +9,4 @@ FetchContent_MakeAvailable(fmt)
 
 add_executable(application main.cpp)
 target_include_directories(application PUBLIC ${PROJECT_SOURCE_DIR}/include)
-target_link_libraries(application PRIVATE fmt::fmt board agent)
+target_link_libraries(application PRIVATE fmt::fmt board agent game)

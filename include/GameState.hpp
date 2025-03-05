@@ -1,0 +1,9 @@
+#ifndef INCLUDE_GAMESTATE_HPP_
+#define INCLUDE_GAMESTATE_HPP_
+
+enum GameState {
+  RUNNING,
+  END,
+};
+
+#endif // !INCLUDE_GAMESTATE_HPP_
