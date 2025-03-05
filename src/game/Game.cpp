@@ -1,5 +1,5 @@
 #include "./Game.hpp"
-#include "./GameState.hpp"
+#include <stdlib.h>
 #include <fmt/core.h>
 
 Game::Game(HumanAgent agent_x, HumanAgent agent_o)
@@ -12,12 +12,12 @@ void Game::start_game() {
 
     if (this->turn % 2) {
       Coordinates curr_action = this->agent_x.getAction(this->board);
-      this->board.setTile(curr_action.x, curr_action.y, TileState::X);
+      this->board.setTile(curr_action.x, curr_action.y, TileState::O);
     } else {
       Coordinates curr_action = this->agent_o.getAction(this->board);
-      this->board.setTile(curr_action.x, curr_action.y, TileState::O);
+      this->board.setTile(curr_action.x, curr_action.y, TileState::X);
     }
-
+    system("clear");
     this->turn++;
   }
 }
