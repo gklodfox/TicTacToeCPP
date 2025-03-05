@@ -16,6 +16,12 @@ int main(int argc, char *argv[]) {
   }
 
   HumanAgent agent('X');
+  Coordinates test_action = agent.getAction(board);
+  fmt::println("X: {}\nY: {}", test_action.x, test_action.y);
+
+  board.setTile(test_action.x, test_action.y, TileState::X);
+
+  board.print();
 
   return 0;
 }
